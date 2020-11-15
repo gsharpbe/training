@@ -1,12 +1,16 @@
 ﻿using System;
+using Training.Dal;
 
 namespace Training.Migrations.Production
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Migrating database...");
+            DatabaseUtils.Migrate();
+
+            Console.WriteLine("Done");
         }
     }
 }
