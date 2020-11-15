@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Training.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Training.Api.Middleware.UrlRewriteMiddleware.ApplyUrlRewrite(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Handle arrays of complex objects in query string. Popular client frameworks like angular and kendo send arrays in the format field[index][property],
+            while asp.net core webapi can only handle the format field[index].property. Urls are transformed in the format webapi can handle.
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="P:Training.Api.Services.Background.BackgroundTask.Id">
+            <summary>
+            The id of the background task
+            </summary>
+        </member>
+        <member name="P:Training.Api.Services.Background.BackgroundTask.Name">
+            <summary>
+            The name of the background task
+            </summary>
+        </member>
+        <member name="P:Training.Api.Services.Background.BackgroundTask.WorkItem">
+            <summary>
+            The task to fulfill
+            </summary>
+        </member>
+        <member name="P:Training.Api.Services.Background.BackgroundTaskStatus.TaskId">
+            <summary>
+            Reference to the id of the background task
+            </summary>
+        </member>
+        <member name="P:Training.Api.Services.Background.BackgroundTaskStatus.Name">
+            <summary>
+            The name of the background task
+            </summary>
+        </member>
+        <member name="P:Training.Api.Services.Background.BackgroundTaskStatus.Progress">
+            <summary>
+            The progress in %
+            </summary>
+        </member>
+        <member name="P:Training.Api.Services.Background.BackgroundTaskStatus.IsCompleted">
+            <summary>
+            Indicates if the task is completed
+            </summary>
+        </member>
+        <member name="P:Training.Api.Services.Background.BackgroundTaskStatus.Result">
+            <summary>
+            The result of the processing of the background task
+            </summary>
+        </member>
+        <member name="P:Training.Api.Services.Background.BackgroundTaskStatus.QueuedAt">
+            <summary>
+            Time when the task was queued
+            </summary>
+        </member>
+        <member name="P:Training.Api.Services.Background.BackgroundTaskStatus.FinishedAt">
+            <summary>
+            Time when the task finished
+            </summary>
+        </member>
+        <member name="M:Training.Api.Services.Base.Service`2.BeforeUpdate(`1,`0)">
+            <summary>
+            Entry point for performing logic that needs to happen at the beginning of the update process
+            </summary>
+        </member>
+        <member name="M:Training.Api.Services.Base.Service`2.BeforeSaveUpdated(`0,`1)">
+            <summary>
+            Entry point for performing logic that needs to happen before the updated entity will be saved to the database
+            </summary>
+        </member>
+        <member name="M:Training.Api.Services.Base.Service`2.AfterUpdate(`0,`1)">
+            <summary>
+            Entry point for performing logic that needs to happen after the updated entity has been saved to the database
+            </summary>
+        </member>
+        <member name="M:Training.Api.Services.Base.Service`2.BeforeCreate(`0)">
+            <summary>
+            Entry point for performing logic that needs to happen at the beginning of the creation process
+            </summary>
+        </member>
+        <member name="M:Training.Api.Services.Base.Service`2.BeforeSaveCreated(`0,`1)">
+            <summary>
+            Entry point for performing logic that needs to happen before the newly created entity will be saved to the database
+            </summary>
+        </member>
+        <member name="M:Training.Api.Services.Base.Service`2.AfterCreate(`0,`1)">
+            <summary>
+            Entry point for performing logic that needs to happen after the newly created entity has been saved to the database
+            </summary>
+        </member>
+        <member name="M:Training.Api.Services.Base.Service`2.BeforeDelete(`1)">
+            <summary>
+            Entry point for performing logic that needs to happen at the beginning of the deletion process
+            </summary>
+        </member>
+        <member name="M:Training.Api.Services.Base.Service`2.BeforeSaveDeleted(`1)">
+            <summary>
+            Entry point for performing logic that needs to happen before the obsolete entity will be saved to the database
+            </summary>
+        </member>
+        <member name="M:Training.Api.Services.Base.Service`2.AfterDelete(`1)">
+            <summary>
+            Entry point for performing logic that needs to happen after the obsolete entity has been saved to the database
+            </summary>
+        </member>
+        <member name="M:Training.Api.Services.Expressions.FilterExpressionBuilder`1.GetCustomFilterExpression(System.String,System.String,Metanous.Model.Core.Filter.FilterOperator)">
+            <summary>
+            Specific override in case of field names that don't match any model property names / different behaviour
+            </summary>
+            <param name="field"></param>
+            <param name="value"></param>
+            <param name="filterOperator"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Training.Api.Services.Expressions.FilterExpressionBuilder`1.GetCustomFilterFieldMappingExpression(System.String)">
+            <summary>
+            Override if the filter field name shoudl map on a different member
+            </summary>
+            <param name="field"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Training.Api.Services.Expressions.FilterExpressionBuilder`1.GetGlobalFilterExpression">
+            <summary>
+            Injects a 'where' statement in every search
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
