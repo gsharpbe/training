@@ -1,0 +1,4 @@
+{
+    "csharp2ts.propertiesToCamelCase": true,
+    "csharp2ts.classToInterface": false
+}

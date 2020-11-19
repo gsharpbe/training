@@ -1,3 +1,4 @@
+import { CustomerApiService } from './services/api/customer-api.service';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { MenuComponent } from './modules/app/components/menu/menu.component';
@@ -15,9 +16,10 @@ import { CustomersModule } from './modules/customers/customers.module';
     SharedModule,
     AppRoutingModule,
     CustomersModule,
-    ProjectsModule
+    ProjectsModule,
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [
     AppComponent
   ]
