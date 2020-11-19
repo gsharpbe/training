@@ -1,3 +1,4 @@
+import { ModalModule } from 'ngx-bootstrap/modal';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,13 +14,15 @@ import { HttpClientModule } from '@angular/common/http';
     // FormsModule,
     // TableModule,
     // HttpClientModule
+    ModalModule.forRoot()
   ],
   exports: [
     CommonModule,
     BrowserModule,
     FormsModule,
     TableModule,
-    HttpClientModule
+    HttpClientModule,
+    ModalModule
   ]
 })
 export class SharedModule { }

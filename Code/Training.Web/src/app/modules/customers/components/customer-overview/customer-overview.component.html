@@ -7,6 +7,9 @@
             <th>
                 Addresses
             </th>
+            <th>
+                <button (click)="addCustomer()">Add</button>
+            </th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-customer>
@@ -23,6 +26,9 @@
                         <hr *ngIf="!isLast">
                     </li>
                 </ul>
+            </td>
+            <td>
+                <button (click)="editCustomer(customer)">Edit</button>
             </td>
         </tr>
     </ng-template>

@@ -6,6 +6,8 @@ import { AppComponent } from './modules/app/components/app/app.component';
 import { SharedModule } from './modules/shared/shared.module';
 import { ProjectsModule } from './modules/projects/projects.module';
 import { CustomersModule } from './modules/customers/customers.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { CustomersModule } from './modules/customers/customers.module';
     AppRoutingModule,
     CustomersModule,
     ProjectsModule,
+    BrowserAnimationsModule,
   ],
   providers: [
   ],
