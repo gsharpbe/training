@@ -8,6 +8,13 @@ import { ProjectsModule } from './modules/projects/projects.module';
 import { CustomersModule } from './modules/customers/customers.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -20,6 +27,13 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
     CustomersModule,
     ProjectsModule,
     BrowserAnimationsModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+  })
   ],
   providers: [
   ],

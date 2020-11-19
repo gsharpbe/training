@@ -2,10 +2,10 @@
     <ng-template pTemplate="header">
         <tr>
             <th>
-                Name
+                {{ "customers.name" | translate }}
             </th>
             <th>
-                Addresses
+                {{ "customers.addresses" | translate }}
             </th>
             <th>
                 <button (click)="addCustomer()">Add</button>
@@ -15,7 +15,7 @@
     <ng-template pTemplate="body" let-customer>
         <tr>
             <td>
-                {{ customer.name }}
+                {{ customer.name | uppercase }}
             </td>
             <td>
                 <ul>

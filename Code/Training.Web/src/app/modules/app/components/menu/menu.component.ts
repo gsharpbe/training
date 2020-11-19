@@ -1,4 +1,6 @@
+import { TranslateService } from '@ngx-translate/core';
 import { Component, OnInit } from '@angular/core';
+import { SelectItem } from 'primeng/api';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  languages: SelectItem[];
+  selectedLanguage: string;
+
+  constructor(private translateService: TranslateService) { }
 
   ngOnInit(): void {
+    this.initializeLanguages();
+  }
+
+  initializeLanguages(): void {
+    this.languages = [{ label: 'English', value: 'en' }, { label: 'Nederlands', value: 'nl' }];
+  }
+
+  onLanguageChanged(): void {
+    this.translateService.use(this.selectedLanguage);
   }
 
 }

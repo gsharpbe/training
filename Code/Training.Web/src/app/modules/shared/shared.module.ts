@@ -5,15 +5,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
 import { HttpClientModule } from '@angular/common/http';
+import { TranslateModule } from '@ngx-translate/core';
+import { DropdownModule } from 'primeng/dropdown';
+import { NewLineToBreakPipe } from 'src/app/pipes/new-line-to-break';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    NewLineToBreakPipe
+  ],
   imports: [
     // CommonModule,
     // BrowserModule,
     // FormsModule,
     // TableModule,
     // HttpClientModule
+    TranslateModule,
     ModalModule.forRoot()
   ],
   exports: [
@@ -21,8 +27,11 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     FormsModule,
     TableModule,
+    DropdownModule,
     HttpClientModule,
-    ModalModule
+    ModalModule,
+    TranslateModule,
+    NewLineToBreakPipe
   ]
 })
 export class SharedModule { }

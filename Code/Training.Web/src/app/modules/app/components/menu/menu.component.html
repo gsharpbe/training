@@ -1,14 +1,20 @@
 <!-- <div class="container-fluid"> -->
-    <div class="row">
-        <div class="col-md-2">
-            <a class="btn btn-primary" [routerLink]="['/customers']">
-                Customers
-            </a>
-        </div>
-        <div class="col-md-2">
-            <a [routerLink]="['/projects']">
-                Projects
-            </a>
-        </div>
+<div class="row">
+    <div class="col-md-2">
+        <a class="btn btn-primary" [routerLink]="['/customers']">
+            Customers
+        </a>
     </div>
+    <div class="col-md-2">
+        <a [routerLink]="['/projects']">
+            Projects
+        </a>
+    </div>
+    <div class="col-md-8" align="right">
+        <span class="mr-2">
+            {{ "menu.language" | translate }}
+        </span>
+        <p-dropdown [options]="languages" [(ngModel)]="selectedLanguage" (onChange)="onLanguageChanged()"></p-dropdown>
+    </div>
+</div>
 <!-- </div> -->

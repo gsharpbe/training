@@ -1,0 +1,8 @@
+{
+    "menu.language": "Language",
+    "customers": {
+        "name": "Name",
+        "addresses": "Addresses"
+    },
+    "projects.name": "Name"
+}
