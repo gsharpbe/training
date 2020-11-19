@@ -2,6 +2,7 @@ import { CustomerApiService } from './../../../../services/api/customer-api.serv
 import { Component, OnInit } from '@angular/core';
 import { Customer } from 'src/app/models/customer';
 import { SearchParameters } from 'src/app/services/api/model/search-parameters';
+import { ServiceRequestOptions } from 'src/app/services/api/model/service-request-options';
 
 @Component({
   selector: 'app-customer-overview',
@@ -19,8 +20,11 @@ export class CustomerOverviewComponent implements OnInit {
   }
 
   loadCustomers(): void {
+    const options = new ServiceRequestOptions();
+    options.includes.add('customer', 'addresses');
+
     const searchParameters = new SearchParameters();
-    this.customerApiService.search$(searchParameters).subscribe(result => {
+    this.customerApiService.search$(searchParameters, options).subscribe(result => {
       this.customers = result.data;
     });
   }

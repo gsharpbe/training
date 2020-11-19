@@ -4,12 +4,25 @@
             <th>
                 Name
             </th>
+            <th>
+                Addresses
+            </th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-customer>
         <tr>
             <td>
                 {{ customer.name }}
+            </td>
+            <td>
+                <ul>
+                    <li *ngFor="let address of customer.addresses; let isLast=last; let i=index">
+                        <div [ngClass]="{'alternate-bg': i%2===1}">
+                            {{i}} {{ address.addressLine1}} - {{ address.zip }} {{ address.city}}
+                        </div>
+                        <hr *ngIf="!isLast">
+                    </li>
+                </ul>
             </td>
         </tr>
     </ng-template>
