@@ -1,5 +1,6 @@
 using System.IO;
 using System.IO.Compression;
+using System.Text.Json.Serialization;
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -86,6 +87,7 @@ namespace Training.Api
                     options.SerializerSettings.Converters.Add(new StringEnumConverter());
                 });
 
+
             //AddAuthentication(services);
 
             // setup documentation
@@ -101,6 +103,9 @@ namespace Training.Api
                     "Training.Api.xml");
                 o.IncludeXmlComments(filePath);
             });
+
+            services.AddSwaggerGenNewtonsoftSupport();
+
 
             // setup compression
             services.Configure<GzipCompressionProviderOptions>(options => options.Level = CompressionLevel.Optimal);
