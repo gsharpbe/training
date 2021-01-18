@@ -22,7 +22,9 @@ namespace Training.Api.Mappings.Configuration
         private static void CreateAddressMappings(IMapperConfigurationExpression config)
         {
             config.CreateServiceModelMap<AddressModel, Address>();
-            config.CreateModelMap<Address, AddressModel>();
+
+            config.CreateModelMap<Address, AddressModel>()
+                .MapReference(x => x.Country, x => x.Country);
         }
     }
 }

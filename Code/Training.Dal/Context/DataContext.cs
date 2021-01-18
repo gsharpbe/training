@@ -16,6 +16,7 @@ namespace Training.Dal.Context
         {
             base.OnModelCreating(modelBuilder);
 
+            DomainDataConfig.Configure(modelBuilder);
             CustomerConfig.Configure(modelBuilder);
             ProjectConfig.Configure(modelBuilder);
         }

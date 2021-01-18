@@ -7,6 +7,7 @@ namespace Training.Api.Mappings
     {
         public AutoMapperConfig()
         {
+            DomainDataMapperConfig.CreateMappings(this);
             CustomerMapperConfig.CreateMappings(this);
             ProjectMapperConfig.CreateMappings(this);
         }

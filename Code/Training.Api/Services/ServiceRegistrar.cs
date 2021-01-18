@@ -8,8 +8,10 @@ using Training.Api.Services.Background;
 using Training.Api.Services.Background.Quartz;
 using Training.Api.Services.Base;
 using Training.Api.Services.Customer;
+using Training.Api.Services.DomainData;
 using Training.Api.Services.Project;
 using Training.Dal.Models;
+using Training.Model;
 
 namespace Training.Api.Services
 {
@@ -29,6 +31,7 @@ namespace Training.Api.Services
             services.AddHostedService<QuartzHostedService>();
 
             // services
+            services.Register<CountryService, Country, CountryModel>();
             services.Register<CustomerService, Model.Customer, CustomerModel>();
             services.Register<ProjectService, Model.Project, ProjectModel>();
         }

@@ -8,5 +8,6 @@ namespace Training.Model
         public string AddressLine2 { get; set; }
         public string Zip { get; set; }
         public string City { get; set; }
+        public Country Country { get; set; }
     }
 }

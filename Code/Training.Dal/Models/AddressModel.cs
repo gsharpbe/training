@@ -8,6 +8,7 @@ namespace Training.Dal.Models
         public string AddressLine2 { get; set; }
         public string Zip { get; set; }
         public string City { get; set; }
+        public virtual CountryModel Country { get; set; }
 
         public virtual CustomerModel Customer { get; set; }
     }
